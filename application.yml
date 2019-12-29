@@ -1,21 +1,23 @@
 spring:
- profiles:
-    active:
-        - dev
+    profiles:
+        active:
+            - dev
 ---
 spring:
- profiles: dev
- application:
-    name: microcloud-config-client 
+    port: 8201
+    profiles: dev
+    application:
+        name: microcloud-config-client 
 eureka:
   client: 
     service-url:
       defaultZone: http://admin:admin@eureka1:7001/eureka
 ---
 spring:
- profiles: beta
- application:
-    name: microcloud-config-client 
+    port: 8202
+    profiles: beta
+    application:
+        name: microcloud-config-client 
 eureka:
   client: 
     service-url:
