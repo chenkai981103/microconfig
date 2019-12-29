@@ -1,14 +1,22 @@
 spring:
  profiles:
- active:
- - dev
+    active:
+        - dev
 ---
 spring:
  profiles: dev
  application:
- name: microconfig-test-dev
+    name: microcloud-config-client 
+eureka:
+  client: 
+    service-url:
+      defaultZone: http://admin:admin@eureka1:7001/eureka
 ---
 spring:
- profiles: default
+ profiles: beta
  application:
- name: microconfig-test-default
+    name: microcloud-config-client 
+eureka:
+  client: 
+    service-url:
+      defaultZone: http://admin:admin@eureka1:7001/eureka
