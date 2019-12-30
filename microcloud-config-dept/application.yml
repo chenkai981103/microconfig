@@ -16,11 +16,6 @@ eureka:
     prefer-ip-address: true #访问路径换为ip地址
     #lease-expiration-duration-in-seconds: 5 #如果5秒不跳表示挂了(默认是90秒)
     #lease-renewal-interval-in-seconds: 2 #设置心跳的间隔（默认是30秒）
-info:
-  app.name: mldn-microcloud
-  compay.name: www.mldn.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
 management:
   endpoints:
     web:
