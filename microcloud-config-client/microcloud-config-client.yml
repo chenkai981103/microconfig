@@ -1,5 +1,11 @@
+spring:
+    profiles:
+        active:
+            - dev
+---
 server:
-    port: 8201
+  port: 8001
+  profiles: dev
 spring:
     application:
         name: microcloud-config-client 
@@ -7,4 +13,25 @@ eureka:
   client: 
     service-url:
       defaultZone: http://admin:admin@eureka1:7301/eureka
+info:
+  app.name: mldn-microcloud
+  compay.name: www.mldn.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+---
+server:
+  port: 8001
+  profiles: beta
+spring:
+    application:
+        name: microcloud-config-client 
+eureka:
+  client: 
+    service-url:
+      defaultZone: http://admin:admin@eureka1:7301/eureka
+info:
+  app.name: mldn-microcloud
+  compay.name: www.mldn.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
      
