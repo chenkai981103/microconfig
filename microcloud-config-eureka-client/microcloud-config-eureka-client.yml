@@ -21,7 +21,7 @@ spring:
   security:
     user:
       name: admin
-      password: admin
+      password: '{cipher}AQBKu+2GHVIBMkHGoTuN6Py/Xy7lfejutjolVFqIPPDtnVrLZkMOl4SDdyIHjb5EtHKDf63/YrQ0RpX6cT6LLM6sraIRBgIgCAix2/NIyVo7wygT4GXY3OoF017RuXrnswJ+PO26OcPgUHjWkUqS5nHzeOIFaBhDYMiIy/x5lcpmHykcLM8ZFVkQrUHDCyrE8mxVQsIopMNGL3CddPtdjRfdPVZuE2ZDGrpEhbr32IahK07zAHF3eHAM1CkEmfCWUY77eiarAbQroP42y8wbU3yTxZ+d7fvsMQ7A2U8LlQIPwrHgKPOgJAu7bj7DK1ih+U7SQKaYX8IM845nTTo2SGHGzhdXIPQP9HPNIcrL+GJka0kaY0UqgA1BHHTQNKe/wnQ='
       roles:  USER
   application:
     name: microcloud-eureka-7001

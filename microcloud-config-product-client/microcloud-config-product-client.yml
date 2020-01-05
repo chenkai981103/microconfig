@@ -24,7 +24,7 @@ logging:
 eureka:
   client: #客户端进行eureka注册的配置
     service-url:
-      defaultZone: http://admin:admin@eureka1:7001/eureka,http://admin:admin@eureka2:7002/eureka,http://admin:admin@eureka3:7003/eureka
+      defaultZone: http://admin:mysqladmin@eureka1:7001/eureka
   instance:
     instance-id: microcloud-provider-product:8001 #页面显示主机信息时显示的信息
     prefer-ip-address: true #访问路径换为ip地址
@@ -57,7 +57,7 @@ logging:
 eureka:
   client: #客户端进行eureka注册的配置
     service-url:
-      defaultZone: http://admin:admin@eureka1:7001/eureka,http://admin:admin@eureka2:7002/eureka,http://admin:admin@eureka3:7003/eureka
+      defaultZone: http://admin:mysqladmin@eureka1:7001/eureka
   instance:
     instance-id: microcloud-provider-product:8001 #页面显示主机信息时显示的信息
     prefer-ip-address: true #访问路径换为ip地址
