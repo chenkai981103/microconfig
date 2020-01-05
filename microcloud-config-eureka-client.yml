@@ -1,0 +1,50 @@
+spring:
+    profiles:
+        active:
+            - dev
+---
+server:
+  port: 7001
+  profiles: dev
+eureka:
+  instance: #eureka实例信息的定义
+    hostname: eureka1 #eureka实例所在的主机名称
+  server:
+    eviction-interval-timer-in-ms: 60000 #设置清理的间隔时间，设置是毫秒单位，默认是60s
+    #enable-self-preservation: true #是否开启保护模式，理论上只有关闭保护模式之后才能进行无效为服务的清理操作，如果在开启自我保护机制前，服务失效，那么其会被删除
+  client:
+    register-with-eureka: false #表明当前微服务不注册到eureka当中
+    fetch-registry: false #表明不通过eureka注册中心获取服务的信息
+    service-url:
+      defaultZone: http://admin:admin@eureka2:7002/eureka,http://admin:admin@eureka3:7003/eureka
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+      roles:  USER
+  application:
+    name: microcloud-eureka-7001
+---
+server:
+  port: 7001
+  profiles: beta
+eureka:
+  instance: #eureka实例信息的定义
+    hostname: eureka1 #eureka实例所在的主机名称
+  server:
+    eviction-interval-timer-in-ms: 60000 #设置清理的间隔时间，设置是毫秒单位，默认是60s
+    #enable-self-preservation: true #是否开启保护模式，理论上只有关闭保护模式之后才能进行无效为服务的清理操作，如果在开启自我保护机制前，服务失效，那么其会被删除
+  client:
+    register-with-eureka: false #表明当前微服务不注册到eureka当中
+    fetch-registry: false #表明不通过eureka注册中心获取服务的信息
+    service-url:
+      defaultZone: http://admin:admin@eureka2:7002/eureka,http://admin:admin@eureka3:7003/eureka
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+      roles:  USER
+  application:
+    name: microcloud-eureka-7001
