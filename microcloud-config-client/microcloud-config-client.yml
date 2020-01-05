@@ -14,8 +14,8 @@ eureka:
     service-url:
       defaultZone: http://admin:admin@eureka1:7301/eureka
 info:
-  app.name: mldn-microcloud
-  compay.name: www.mldn.com
+  app.name: chenkai
+  compay.name: buwen
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 ---
